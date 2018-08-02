@@ -1,0 +1,6 @@
+projectKey=javaproj
+serverUrl=http://localhost:4000
+serverVersion=6.4.0.25310
+dashboardUrl=http://localhost:4000/dashboard/index/javaproj
+ceTaskId=AWTabWCfJ3oCY6IbprYv
+ceTaskUrl=http://localhost:4000/api/ce/task?id=AWTabWCfJ3oCY6IbprYv

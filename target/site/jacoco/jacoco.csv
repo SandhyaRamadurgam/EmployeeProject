@@ -1,0 +1,8 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+employeemanagement,org.mindtree.employeemanagement.exception,CustomerNotFoundException,0,4,0,0,0,2,0,1,0,1
+employeemanagement,org.mindtree.employeemanagement.exception,CustomerExceptionHandler,75,24,2,0,13,5,4,2,3,2
+employeemanagement,org.mindtree.employeemanagement.exception,ErrorResponse,0,15,0,0,0,6,0,3,0,3
+employeemanagement,org.mindtree.employeemanagement,ApplicationStart,14,15,0,0,3,4,2,2,2,2
+employeemanagement,org.mindtree.employeemanagement.model,Employee,0,98,0,0,0,40,0,20,0,20
+employeemanagement,org.mindtree.employeemanagement.web.api,EmployeeController,5,113,1,7,1,20,1,10,0,7
+employeemanagement,org.mindtree.employeemanagement.service,EmployeeServiceBean,0,51,0,0,0,13,0,7,0,7

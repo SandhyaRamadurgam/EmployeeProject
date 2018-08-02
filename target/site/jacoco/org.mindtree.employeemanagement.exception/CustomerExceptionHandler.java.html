@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CustomerExceptionHandler.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">employeemanagement</a> &gt; <a href="index.source.html" class="el_package">org.mindtree.employeemanagement.exception</a> &gt; <span class="el_source">CustomerExceptionHandler.java</span></div><h1>CustomerExceptionHandler.java</h1><pre class="source lang-java linenums">package org.mindtree.employeemanagement.exception;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.ObjectError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+
+@ControllerAdvice()
+<span class="fc" id="L17">public class CustomerExceptionHandler extends ResponseEntityExceptionHandler</span>
+{
+    @ExceptionHandler(Exception.class)
+    public final ResponseEntity&lt;Object&gt; handleAllExceptions(Exception ex, WebRequest request) {
+<span class="nc" id="L21">        List&lt;String&gt; details = new ArrayList&lt;String&gt;();</span>
+<span class="nc" id="L22">        details.add(ex.getLocalizedMessage());</span>
+<span class="nc" id="L23">        ErrorResponse error = new ErrorResponse(&quot;Server Error&quot;, details);</span>
+<span class="nc" id="L24">        return new ResponseEntity&lt;Object&gt;(error, HttpStatus.INTERNAL_SERVER_ERROR);</span>
+    }
+    
+    @ExceptionHandler(RuntimeException.class)
+    public final ResponseEntity&lt;Object&gt; handleAllSqlExceptions(RuntimeException ex, WebRequest request) {
+<span class="nc" id="L29">        List&lt;String&gt; details = new ArrayList&lt;String&gt;();</span>
+<span class="nc" id="L30">        details.add(&quot;Duplicate keys are not allowed for username and password&quot;);</span>
+<span class="nc" id="L31">        ErrorResponse error = new ErrorResponse(&quot;Unique key Constarint violation &quot;, details);</span>
+<span class="nc" id="L32">        return new ResponseEntity&lt;Object&gt;(error, HttpStatus.INTERNAL_SERVER_ERROR);</span>
+    }
+      
+    @ExceptionHandler(CustomerNotFoundException.class)
+    public final ResponseEntity&lt;Object&gt; handleUserNotFoundException(CustomerNotFoundException ex, WebRequest request) {
+<span class="fc" id="L37">        List&lt;String&gt; details = new ArrayList&lt;String&gt;();</span>
+<span class="fc" id="L38">        details.add(ex.getLocalizedMessage());</span>
+<span class="fc" id="L39">        ErrorResponse error = new ErrorResponse(&quot;Record Not Found&quot;, details);</span>
+<span class="fc" id="L40">        return new ResponseEntity&lt;Object&gt;(error, HttpStatus.NOT_FOUND);</span>
+    }
+ 
+    @Override
+    protected ResponseEntity&lt;Object&gt; handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
+<span class="nc" id="L45">        List&lt;String&gt; details = new ArrayList&lt;String&gt;();</span>
+<span class="nc bnc" id="L46" title="All 2 branches missed.">        for(ObjectError error : ex.getBindingResult().getAllErrors()) {</span>
+<span class="nc" id="L47">            details.add(error.getDefaultMessage());</span>
+        }
+<span class="nc" id="L49">        ErrorResponse error = new ErrorResponse(&quot;Validation Failed&quot;, details);</span>
+<span class="nc" id="L50">        return new ResponseEntity&lt;Object&gt;(error, HttpStatus.BAD_REQUEST);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.0.201801022044</span></div></body></html>
