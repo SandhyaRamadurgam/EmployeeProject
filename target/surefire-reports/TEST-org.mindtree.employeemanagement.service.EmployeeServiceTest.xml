@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.mindtree.employeemanagement.service.EmployeeServiceTest" time="0.111" tests="5" errors="0" skipped="0" failures="0">
+<testsuite name="org.mindtree.employeemanagement.service.EmployeeServiceTest" time="0.203" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_152\jre\bin"/>
@@ -26,9 +26,9 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Assignments\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf2809400209308750035.tmp"/>
+    <property name="classworlds.conf" value="C:\Assignments\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3781888845173623799.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_152\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:/Program Files/Java/jre1.8.0_152/bin/server;C:/Program Files/Java/jre1.8.0_152/bin;C:/Program Files/Java/jre1.8.0_152/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_152\bin;C:\Softwares\Sonar_Maven\apache-maven-3.0.5\apache-maven-3.0.5\bin;C:\Softwares\sonarqube-6.4\bin\windows-x86-64;C:\Softwares\sonar-runner-2.4\bin;C:\Users\M1046716\AppData\Local\Temp;C:\Users\M1046716\Desktop;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_152\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:/Program Files/Java/jre1.8.0_152/bin/server;C:/Program Files/Java/jre1.8.0_152/bin;C:/Program Files/Java/jre1.8.0_152/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_152\bin;C:\Softwares\Sonar_Maven\apache-maven-3.0.5\apache-maven-3.0.5\bin;C:\Softwares\sonarqube-6.4\bin\windows-x86-64;C:\Softwares\sonar-runner-2.4\bin;C:\Program Files\Git\bin;C:\Users\M1046716\AppData\Local\Temp;C:\Users\M1046716\Desktop;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -43,7 +43,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_152\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B package"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B clean test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -60,9 +60,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="deleteEmployee" classname="org.mindtree.employeemanagement.service.EmployeeServiceTest" time="0.058"/>
-  <testcase name="getEmployeeById" classname="org.mindtree.employeemanagement.service.EmployeeServiceTest" time="0.023"/>
-  <testcase name="addEmployee" classname="org.mindtree.employeemanagement.service.EmployeeServiceTest" time="0.012"/>
-  <testcase name="getAllEmployee" classname="org.mindtree.employeemanagement.service.EmployeeServiceTest" time="0.011"/>
-  <testcase name="validateUserPassword" classname="org.mindtree.employeemanagement.service.EmployeeServiceTest" time="0.007"/>
+  <testcase name="deleteEmployee" classname="org.mindtree.employeemanagement.service.EmployeeServiceTest" time="0.083"/>
+  <testcase name="getEmployeeById" classname="org.mindtree.employeemanagement.service.EmployeeServiceTest" time="0.047"/>
+  <testcase name="addEmployee" classname="org.mindtree.employeemanagement.service.EmployeeServiceTest" time="0.037"/>
+  <testcase name="getAllEmployee" classname="org.mindtree.employeemanagement.service.EmployeeServiceTest" time="0.018"/>
+  <testcase name="validateUserPassword" classname="org.mindtree.employeemanagement.service.EmployeeServiceTest" time="0.018"/>
 </testsuite>
