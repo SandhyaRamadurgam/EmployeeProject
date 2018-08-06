@@ -69,7 +69,7 @@ public class EmployeeControllerTest {
 	 @Test
 	public void getAllEmployee() throws Exception {
 		mockmvc.perform(MockMvcRequestBuilders.get("/empMgt/getAllEmpDetails").accept(MediaType.APPLICATION_JSON_VALUE))
-				.andExpect(jsonPath("$", hasSize(9))).andDo(print());
+				.andExpect(jsonPath("$", hasSize(1))).andDo(print());
 	}
 	
   @Test
