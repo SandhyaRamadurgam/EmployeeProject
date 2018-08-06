@@ -226,7 +226,7 @@
 </plugin>
 
 </plugins>
-
+<finalName>empdemo</finalName> 
 </build>
 
 </project>
